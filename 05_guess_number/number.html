@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess - Number</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+<body class="bg-gray-400 flex mt-10  justify-center">
+    <div class="container bg-slate-600 w-96 flex flex-col p-5 text-white">
+        <h1 class="text-center font-bold text-2xl ">Number Guessing Game</h1>
+        <div class="intructions-field my-5">
+            <p class="text-xs text-center">Try and guess a number between 1 and 100.</p>
+            <p class="text-xs text-center">You have 10 attepmts to guess the right number.</p>
+        </div>
+
+        <div class="guessing-field flex items-center flex-col gap-3">
+            <h1 class="text-3xl font-semibold text-gray-400">Guess a number</h1>
+            <input id="inpt" type="text" class="outline-none border-none text-black rounded-full p-1 text-center">
+            <button id="btn" class="bg-gray-800 px-5 py-1 rounded-full">Submit guess</button>
+        </div>
+        <div class="result-field flex flex-col justify-center items-center mt-10">
+            <p> Previous Guesses: <span id="previous"></span></p>
+            <p>Guesses remaining: <span id="remaining">10</span></p>
+            <p id="hiiORlow" class="text-lg font-semibold bg-white px-3 py-1 text-gray-600 my-5 rounded-full hidden"></p>
+        </div>
+    </div>
+    <script src="number.js"></script>
+</body>
+</html>

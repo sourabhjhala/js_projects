@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop - Watch</title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body class="bg-slate-700 flex items-center justify-center h-screen ">
+    <div class="wrapper w-4/12 bg-cover bg-center h-56 flex items-center justify-center  flex-col gap-10"
+        style="  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(01_stopwatch_stuff/images/background.png)">
+
+        <h1 class="text-center text-4xl text-white" id="stopwatch">00:00:00</h1>
+
+        <div class="buttons  flex items-end justify-center gap-5">
+            <img class="w-10" src="01_stopwatch_stuff/images/reset.png" id="reset" onclick="watchReset()">
+            <img class="w-[70px]" src="01_stopwatch_stuff/images/start.png" id="start" onclick="watchStart()">
+            <img class="w-10" src="01_stopwatch_stuff/images/stop.png" id="stop" onclick="watchStop()">
+        </div>
+    </div>
+    <script src="stop_w.js"></script>
+</body>
+
+</html>

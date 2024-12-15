@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - Player</title>
+    <link rel="stylesheet" href="music.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="icons">
+                    <i class="ri-arrow-left-s-line"></i>
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+
+            <div class="img-content">
+                <img src="01_music_stuff/468-thumbnail.png" id="img">
+            </div>
+
+            <div class="music-name">
+                <h3>What You Gonna Be</h3>
+                <p>Luis Fonsi Ft. NEFFEX</p>
+            </div>
+
+            <audio  id="song">
+                <source src="01_music_stuff/What You Gonna Be - NEFFEX.mp3">
+            </audio>
+            <input type="range" value="0" id="inpt-p-bar">
+            <div class="controls">
+                <div><i class="ri-skip-left-fill"></i></div>
+                <div><i  class="ri-play-large-fill" id="cntrl-song"></i></div>
+                <div><i class="ri-skip-right-fill"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="music.js"></script>
+</body>
+</html>

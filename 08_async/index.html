@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async - bgColor - change </title>
+    <link rel="stylesheet" href="/src/output.css">
+</head>
+
+<body class="bg-neutral-600 flex items-center flex-col justify-center mt-20">
+    <h1 class="text-white font-semibold text-xl">If you want change the background in multicolor click the button </h1>
+    <button class="bg-indigo-400 px-5 py-2 my-3" id="start">Start</button>
+    <button class="bg-indigo-400 px-5 py-2 " id="stop">Stop</button>
+
+    <script>
+        const start = document.getElementById("start");
+        const stop = document.getElementById("stop");
+        const h1 = document.querySelector("h1");
+
+        const getColorFunction = () => {
+            let letter = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letter[Math.floor(Math.random() * 16)];
+            };
+            return color
+        };
+
+
+        let bgColorBtn;
+        const changeBgColor = () => {
+            bgColorBtn = setInterval(() => {
+                h1.innerHTML = getColorFunction();
+                document.body.style.backgroundColor = getColorFunction();
+            }, 500);
+
+        };
+
+
+        start.addEventListener("click", changeBgColor);
+        stop.addEventListener("click", () => clearInterval(bgColorBtn));
+
+    </script>
+</body>
+
+</html>
